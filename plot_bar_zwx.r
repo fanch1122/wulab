@@ -49,18 +49,5 @@ p <- ggplot(combined_data, aes(x = Gene, y = Value, fill = Group)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1),panel.grid = element_blank())  # 使x轴标签倾斜
 print(p)
 
-p <- ggplot(combined_data, aes(x = Gene, y = Value, fill = Group)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  geom_hline(yintercept = -0.2, linetype = "dashed", color = "black", size = 1) +  # 添加y轴标准线
-  labs(title = "Continuous Bar Plot", y = "ΔG Kcal/mol") +
-  scale_fill_manual(values = c("SMAD4" = "blue", "LAMP3" = "red")) +
-  theme_void() +  # 将主题更改为theme_void()以移除绘图区域的网格背景
-  theme(plot.title = element_text(hjust = 0.5),  # 居中标题
-        legend.position = "none")  # 移除图例
 
-# 显示图形
-print(p)
-
-# 显示图形
-print(p)
 
